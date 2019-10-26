@@ -1,3 +1,4 @@
+import models.Author;
 import models.Book;
 
 public class BookRunner {
@@ -34,5 +35,17 @@ public class BookRunner {
         System.out.println(String.format( "Name: %s, Version: %d, Pages: %d", book2.getTitle(), book2.getVersion(), book2.getPages()));
         System.out.println(String.format( "Name: %s, Version: %d, Pages: %d", book3.getTitle(), book3.getVersion(), book3.getPages()));
 
+        System.out.println("\nExercicio 4");
+
+        Author author1 = new Author("Donald E. Knuth", "donald@gmail.com", 214);
+        book1.setAuthor(author1);
+        Author author2 = new Author("Joshua Bloch", "joshua@gmail.com", 153);
+        book2.setAuthor(author2);
+        Author author3 = new Author("Robert C. Martin", "robert@gmail.com", 188);
+        book3.setAuthor(author3);
+
+        System.out.println(book1.toString());
+        System.out.println(book2.toString());
+        System.out.println(book3.toString());
     }
 }

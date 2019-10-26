@@ -8,6 +8,8 @@ public class Book {
 
     private final int pages;
 
+    private Author author;
+
     public Book(int pages) {
         this.pages = pages;
     }
@@ -30,5 +32,21 @@ public class Book {
 
     public int getPages() {
         return pages;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Name: %s, " +
+                "Version: %d, " +
+                "Pages: %d, " +
+                "%s", title, version, pages, author.toString());
     }
 }
