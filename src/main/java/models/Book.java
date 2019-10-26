@@ -10,6 +10,10 @@ public class Book {
 
     private Author author;
 
+    private Student student;
+
+    private boolean isBooked;
+
     public Book(int pages) {
         this.pages = pages;
     }
@@ -42,11 +46,21 @@ public class Book {
         this.author = author;
     }
 
+    public void setStudent(Student student) {
+        this.student = student;
+        isBooked = true;
+    }
+
+    public boolean isBooked() {
+        return isBooked;
+    }
+
     @Override
     public String toString() {
         return String.format("Name: %s, " +
                 "Version: %d, " +
                 "Pages: %d, " +
-                "%s", title, version, pages, author.toString());
+                "%s" +
+                "Is Booked: %s", title, version, pages, author.toString(), isBooked ? String.format("Yes, Student: %s", student.getName()) : "No");
     }
 }

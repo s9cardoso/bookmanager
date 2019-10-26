@@ -1,5 +1,6 @@
 import models.Author;
 import models.Book;
+import models.Student;
 
 public class BookRunner {
 
@@ -43,6 +44,18 @@ public class BookRunner {
         book2.setAuthor(author2);
         Author author3 = new Author("Robert C. Martin", "robert@gmail.com", 188);
         book3.setAuthor(author3);
+
+        System.out.println(book1.toString());
+        System.out.println(book2.toString());
+        System.out.println(book3.toString());
+
+        System.out.println("\nExercicio 5");
+
+        Student student1 = new Student("Pedro Ribeiro", "pedro@gmail.com", 12345);
+        book1.setStudent(student1);
+
+        Student student2 = new Student("Ricardo Ferreira", "ricardo@gmail.com", 88982);
+        book2.setStudent(student2);
 
         System.out.println(book1.toString());
         System.out.println(book2.toString());
