@@ -6,6 +6,12 @@ public class Book {
 
     private int version = 1;
 
+    private final int pages;
+
+    public Book(int pages) {
+        this.pages = pages;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -20,5 +26,9 @@ public class Book {
 
     public void incrementVersion() {
        version++;
+    }
+
+    public int getPages() {
+        return pages;
     }
 }
