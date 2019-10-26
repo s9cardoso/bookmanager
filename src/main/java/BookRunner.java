@@ -17,7 +17,15 @@ public class BookRunner {
         System.out.println(String.format( "Name: %s", book2.getTitle()));
         System.out.println(String.format( "Name: %s", book3.getTitle()));
 
+        System.out.println("\nExercicio 2");
 
+        book1.incrementVersion();
+        book2.incrementVersion();
+        book3.incrementVersion();
+        book3.incrementVersion();
 
+        System.out.println(String.format( "Name: %s, Version: %d", book1.getTitle(), book1.getVersion()));
+        System.out.println(String.format( "Name: %s, Version: %d", book2.getTitle(), book2.getVersion()));
+        System.out.println(String.format( "Name: %s, Version: %d", book3.getTitle(), book3.getVersion()));
     }
 }
