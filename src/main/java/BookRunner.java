@@ -1,5 +1,6 @@
 import models.Author;
 import models.Book;
+import models.Review;
 import models.Student;
 
 public class BookRunner {
@@ -60,5 +61,15 @@ public class BookRunner {
         System.out.println(book1.toString());
         System.out.println(book2.toString());
         System.out.println(book3.toString());
+
+        System.out.println("\nExercicio 6");
+
+        book2.getLstReviews().add(new Review("Review 1", 3.4));
+        book2.getLstReviews().add(new Review("Review 2", 4.4));
+        book2.getLstReviews().add(new Review("Review 3", 5));
+        book2.getLstReviews().add(new Review("Review 4", 3.8));
+        book2.getLstReviews().add(new Review("Review 5", 3.9));
+
+        System.out.println(book2.toString());
     }
 }
